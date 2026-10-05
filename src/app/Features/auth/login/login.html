@@ -1,0 +1,22 @@
+<div class="page">
+    <div class="login-container">
+        <div class="heading-section">
+            <h1>Sign in</h1>
+            <p class="login-subtitle">Please login to continue to your account.</p>
+        </div>
+
+        <user-input type="email" class="input-field" placeholder="Enter your email" label="Email ID / Username" />
+        <div class="password-section">
+            <user-input type="password" class="input-field" placeholder="Password" label="Password" />
+            <p>
+                <app-link href="#">Forget Password</app-link>
+        </div>
+        <div class="button-section">
+            <app-button variant="primary" size="large" type="submit" (click)="signIn()">Sign In</app-button>
+            <p class="footer-text">Need an account?
+                <app-link href="#">Create One</app-link>
+            </p>
+        </div>
+    </div>
+    <!--<app-toast statusType="error" title="Sign in failed" message="The email or password is incorrect." />-->
+</div>

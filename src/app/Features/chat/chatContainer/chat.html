@@ -1,0 +1,54 @@
+<!--<div class="layout-container">
+    <app-sidebar class="left-column"></app-sidebar>
+    <main class="right-column">dssfsd
+    </main>
+    </div>-->
+
+<div class="two-panel-container">
+
+    <!-- LEFT PANEL-->
+    <aside class="left-panel">
+        <div class="panel-header">
+            <a routerLink="/" class="back-home-btn">New Chat</a>
+        </div>
+        <div class="session-list">
+            @for (conv of chatState.conversations(); track conv.id) {
+            <a [routerLink]="['/chat', conv.id]" routerLinkActive="active" class="session-tab">
+                <span class="chat-icon">💬</span> {{ conv.title }}
+            </a>
+            } @empty {
+            <p class="empty-state">No conversation history.</p>
+            }
+        </div>
+    </aside>
+
+    <main class="right-panel">
+        @if (chatState.activeConversation(); as activeChat) {
+        <div class="chat-viewport">
+
+            <div class="message-stream">
+                @for (msg of activeChat.messages; track msg.timestamp.getTime()) {
+                <div class="bubble-wrapper" [ngClass]="msg.type">
+                    <div class="chat-bubble">
+                        {{ msg.title }}
+                    </div>
+                </div>
+                }
+            </div>
+
+            <!-- Inline Send controls for continuous texting -->
+            <div class="inline-send-box">
+                <input type="text" [(ngModel)]="chatState.currentPrompt" (keyup.enter)="sendReply()"
+                    placeholder="Type a follow-up message..." />
+                <button (click)="sendReply()">Send</button>
+            </div>
+
+        </div>
+        } @else {
+        <div class="fallback-state">
+            <p>Please select a conversation from the history panel to view the content response stream.</p>
+        </div>
+        }
+    </main>
+
+</div>

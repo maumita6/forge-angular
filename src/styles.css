@@ -1,1 +1,157 @@
-/* You can add global styles to this file, and also import other style files */
+@import '../../../tokens/tokens.css';
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-gray-50);
+    font-family: 'Inter', sans-serif;
+    color: var(--text-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /* Changed from fixed 100vh for dynamic safety */
+    margin: 0;
+}
+
+a {
+    color: var(--action-primary);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: var(--link);
+}
+
+a:hover {
+    color: var(action-primary-hover);
+    text-decoration: underline;
+}
+
+input {
+    outline: none;
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100%;
+    padding: var(--component-lg);
+}
+
+.login-container {
+    background-color: var(--surface-primary);
+    border-radius: var(--radius-lg);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06), 0 1px 4px rgba(0, 0, 0, 0.04);
+    width: 100%;
+    max-width: 600px;
+    padding: var(--component-2xl);
+    display: flex;
+    flex-direction: column;
+    margin-bottom: var(--component-md);
+}
+
+/* Typography */
+.login-container h1 {
+    font-size: var(--section-heading);
+    color: var(--text-primary);
+    margin: 0 0 var(--spacing-1) 0;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+.login-subtitle {
+    font-size: var(--body-default);
+    color: var(--text-muted);
+    margin: 0 0 var(--spacing-3) 0;
+    line-height: 1.5;
+}
+
+.heading-section {
+    margin: var(--component-xxs) 0;
+}
+
+.button-section {
+    margin: var(--component-lg) 0;
+}
+
+.password-section p {
+    text-align: right;
+    margin: 0;
+}
+
+/* Fields & Actions Styling */
+.input-field {
+    width: 100%;
+    margin-bottom: var(--spacing-2);
+}
+
+.button-primary {
+    width: 100%;
+    margin-top: var(--spacing-2);
+}
+
+/*  Footer Link  */
+.footer-text {
+    text-align: center;
+    font-size: var(--label);
+    color: var(--text-secondary);
+    margin: var(--spacing-4) 0 0 0;
+}
+
+.footer-text a {
+    color: var(--action-primary);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.footer-text a:hover {
+    color: var(--action-primary-hover);
+    text-decoration: underline;
+}
+
+app-root {
+    width: 100%;
+}
+
+/* Responsive Breakpoints */
+
+
+/* Tablet View */
+@media (max-width: 768px) {
+    .login-container {
+        max-width: 360px;
+        padding: var(--component-lg);
+    }
+}
+
+
+
+/* Mobile View */
+@media (max-width: 480px) {
+    body {
+        align-items: flex-start;
+    }
+
+    .page {
+        justify-content: flex-start;
+        padding: var(--component-md) 0 0 0;
+    }
+
+    .login-container {
+        max-width: 100%;
+        border-radius: var(--radius-0);
+        box-shadow: none;
+        background: transparent;
+        padding: var(--component-xl);
+    }
+
+    .login-container .heading-section {
+        gap: var(--component-xxs);
+    }
+
+}

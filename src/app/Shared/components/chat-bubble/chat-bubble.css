@@ -1,0 +1,72 @@
+:host {
+    display: block;
+    width: 100%;
+    margin-bottom: 0.75rem;
+}
+
+/* Base structural layout using Flexbox */
+.bubble_container {
+    display: flex;
+    flex-direction: column;
+    max-width: 75%;
+    width: fit-content;
+}
+
+/* Chat bubble main body wrapper */
+.bubble_content {
+    padding: 0.65rem 1rem;
+    border-radius: 1.25rem;
+    position: relative;
+    line-height: 1.4;
+    word-break: break-word;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Configuration for messages SENT by the user (Right Side) */
+.bubble_container.sent {
+    margin-left: auto;
+    align-items: flex-end;
+}
+
+.bubble_container.sent .bubble_content {
+    background-color: #007aff;
+    /* Apple Blue style */
+    color: #ffffff;
+    border-bottom-right-radius: 0.25rem;
+    /* Chat bubble tail effect */
+}
+
+/* Configuration for messages RECEIVED by the user (Left Side) */
+.bubble_container.received {
+    margin-left: 0;
+    align-items: flex-start;
+}
+
+.bubble_container.received .bubble_content {
+    background-color: #e9e9eb;
+    /* Light grey style */
+    color: #000000;
+    border-bottom-left-radius: 0.25rem;
+    /* Chat bubble tail effect */
+}
+
+/* Meta typography details */
+.sender_name {
+    font-size: 0.75rem;
+    color: #666666;
+    margin-bottom: 0.25rem;
+    margin-left: 0.5rem;
+}
+
+.message_text {
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+.message_time {
+    display: block;
+    font-size: 0.7rem;
+    text-align: right;
+    margin-top: 0.25rem;
+    opacity: 0.7;
+}

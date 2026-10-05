@@ -1,0 +1,7 @@
+<div class="chat-input">
+    <input type="text" [(ngModel)]="chatState.currentPrompt" placeholder="What is our data retention policy ? "
+        class="chat_input_field" value="What is our data retention policy ?" />
+
+    <button type="button" class="chat_input_send" (click)="sendMessage()"
+        [disabled]="!chatState.currentPrompt().trim()">➤</button>
+</div>

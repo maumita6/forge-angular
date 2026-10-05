@@ -1,0 +1,10 @@
+<button class="forge-button-primary" [class.button-sm]="size() === 'small'" [class.button-md]="size() === 'medium'"
+  [class.button-lg]="size() === 'large'" [class.button-primary-bg]="variant() === 'primary'"
+  [class.button-secodnary-bg]="variant() === 'secondary'" [class.button-danger-bg]="variant() === 'danger'"
+  [attr.type]="type()" [disabled]="disabled()">
+  <ng-content>
+    @if(label()){
+    {{ label() }}
+    }
+  </ng-content>
+</button>

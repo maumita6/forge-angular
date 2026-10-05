@@ -1,0 +1,70 @@
+:host {
+    display: block;
+    font-family: inherit;
+}
+
+.input-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-component-xs);
+    /* maps to var(--spacing-2) / 8px */
+    width: 100%;
+}
+
+.input-label {
+    color: var(--text-secondary);
+    font-size: var(--label);
+    font-weight: 500;
+}
+
+.input-field {
+    background-color: var(--input-bg);
+    border: var(--border-1) solid var(--border-default);
+    border-radius: var(--radius-sm);
+    color: var(--text-primary);
+    font-size: var(--font-body-default);
+    padding: var(--padding-3) var(--padding-3);
+    outline: none;
+    transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.input-field::placeholder {
+    color: var(--input-placeholder-color);
+    font-size: var(--placeholder);
+}
+
+/* Interactive States using Token Actions */
+input:focus {
+    border-color: var(--action-primary);
+    background-color: var(--input-focus-bg);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.5);
+    /* Subtly uses primary theme color */
+}
+
+.input-field:disabled {
+    background-color: var(--color-gray-50);
+    color: var(--text-disabled);
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.toggle-password svg {
+    width: 20px;
+    height: 20px;
+    fill: #666;
+}

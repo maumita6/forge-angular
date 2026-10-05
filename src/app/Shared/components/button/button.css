@@ -1,0 +1,75 @@
+/*.forge-button {
+  height: var(--button-height-md);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--button-gap);
+  border: none;
+  font-size: var(--button-font-base);
+  font-weight: 600;
+  cursor: pointer;
+}*/
+
+.forge-button-primary {
+  /*background-color: var(--button-primary-bg);*/
+  color: var(--button-primary-text);
+  padding: var(--button-padding-md);
+  border-radius: var(--button-radius-sm);
+  height: var(--button-lg);
+  width: 100%;
+  font-weight: 400;
+  font-size: var(--button-font-base);
+  cursor: pointer;
+  outline: none !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+}
+
+.forge-button-primary:hover {
+  background-color: var(--button-primary-hover-bg);
+}
+
+.forge-button-primary:active {
+  background-color: var(--button-primary-pressed-bg);
+}
+
+.forge-input-default {
+  background-color: var(--input-bg);
+  color: var(--text-primary);
+}
+
+.button-primary-bg {
+  background-color: var(--button-primary-bg);
+  color: var(--button-primary-text);
+  font-size: var(--button-font-sm);
+}
+
+.button-primary-bg:hover {
+  background-color: var(--button-primary-hover-bg);
+}
+
+.button-secodnary-bg {
+  background-color: var(--button-secondary-bg);
+  color: var(--button-secondary-text);
+  font-size: var(--button-font-sm);
+}
+
+.button-secodnary-bg:hover {
+  background-color: var(--button-secondary-hover-bg);
+}
+
+.button-danger-bg {
+  background-color: var(--button-secondary-bg);
+  color: var(--button-secondary-text);
+  font-size: var(--button-font-sm);
+}
+
+.button-danger-bg:hover {
+  background-color: var(--button-secondary-hover-bg);
+}
+
+.forge-input-default::placeholder {
+  color: var(--input-placeholder-color);
+}

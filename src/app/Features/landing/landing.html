@@ -1,0 +1,63 @@
+<!--<app-header></app-header>-->
+
+<!--@if(showToast) {
+<app-toast statusType="success" title="Sign in successful"
+    message="You have successfully signed it with valid credentials" [dismissible]="false" />
+}-->
+
+
+<!--<section class="features">
+    @for (feature of features(); track feature.title) {
+    <div class="feature-card">
+        <h3>{{ feature.title }}</h3>
+        <p>{{ feature.desc }}</p>
+    </div>
+    } @empty {
+    <p>No features available.</p>
+    }
+</section>-->
+<!--<app-button variant="secondary" size="small" type="submit" (click)="backToLogin()">Back to login</app-button>-->
+<main class="dashboard">
+    <h1 class="dashboard_title">Good Morning, John! 👋</h1>
+
+    <section class="dashboard_cards">
+        <app-card variant="primary" title="Autonomous Document Intelligence"
+            description="Generates contextually-aware proposals that align with organizational parameters.">
+        </app-card>
+
+        <app-card variant="secondary" title="Adaptive Content Orchestration"
+            description="Generates contextually-aware proposals that align with organizational parameters.">
+        </app-card>
+
+        <app-card variant="info" title="Intelligent Process Governance"
+            description="Monitors workflows, predicts bottlenecks, and delivers actionable intelligence.">
+        </app-card>
+    </section>
+
+    <div class="chat_prompt_wrapper">
+        <app-chat-input></app-chat-input>
+        <section class="dashboard_prompts">
+            <h2>Try our prompts</h2>
+            @for (prompt of prompts(); track prompt) {
+            <button class="prompt-card" variant="secondary" size="small" (click)="selectPrompt(prompt)">
+                {{ prompt }}
+            </button>
+            }
+            <!-- <app-button label="What security controls do we use" variant="secondary" size="small"></app-button>
+        <app-button label="What is the vendor onboarding process" variant="secondary" size="small"></app-button>
+        <app-button label="What is our GDP requirements" variant="secondary" size="small"></app-button>-->
+        </section>
+    </div>
+</main>
+
+<!--<footer class="footer">
+    <div class="footer_left">
+        <app-link label="Privacy Policy"></app-link> |
+    </div>
+
+    <div class="footer_right">
+        <app-link label="Cookies"></app-link>
+
+    </div>
+
+</footer>-->

@@ -1,10 +1,18 @@
-import { ApplicationConfig, provideBrowserGlobalErrorListeners } from '@angular/core';
-import { provideRouter } from '@angular/router';
+import { ApplicationConfig, provideZoneChangeDetection } from '@angular/core';
+import { provideRouter, Routes, withComponentInputBinding } from '@angular/router';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
+import { Landing } from './Features/landing/landing';
+import { ChatContainer } from './Features/chat/chatContainer/chat';
 import { routes } from './app.routes';
+
+/*const routes: Routes = [
+  { path: '', component: Landing },
+  { path: 'chat/:id', component: ChatContainer }
+];*/
 
 export const appConfig: ApplicationConfig = {
   providers: [
-    provideBrowserGlobalErrorListeners(),
-    provideRouter(routes)
+    //provideZoneChangeDetection({ eventCoalescing: true }),
+    provideRouter(routes, withComponentInputBinding())
   ]
 };

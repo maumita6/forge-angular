@@ -1,0 +1,10 @@
+<div class="bubble-container" [ngClass]="type()">
+    <div class="bubble-content">
+        <p class="message-text">{{ message() }}</p>
+
+        @if (timeStamp()) {
+        <span class="message-time">{{ timeStamp() }}</span>
+        }
+    </div>
+
+</div>

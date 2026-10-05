@@ -1,0 +1,8 @@
+<div class="input-wrapper">
+    @if(label()){
+    <label class="input-label" [for]="inputId()">{{ label() }}</label>
+    }
+    <input [id]="inputId()" [type]="type()" [value]="value()" (input)="onInputChange($event)"
+        [placeholder]="placeholder()" [disabled]="disabled()" class="input-field" />
+
+</div>

@@ -1,0 +1,26 @@
+<div class="toast" [class.toast-success-background]="statusType() === 'success'"
+    [class.toast-error-background]="statusType() === 'error'"
+    [class.toast--warning-background]="statusType() === 'warning'"
+    [class.toast--info-background]="statusType() === 'info'">
+
+    <div class="toast__content">
+        @if(title()){
+        <div class="toast__title">
+            {{ title() }}
+        </div>
+        }
+
+        @if(message()){
+        <div class="toast__message">
+            {{ message() }}
+        </div>
+        }
+
+        @if(dismissible()){
+        <button type="button" class="toast__close" aria-label="Close notification" (click)="close()">
+            ×
+        </button>
+        }
+    </div>
+
+</div>

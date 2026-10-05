@@ -1,0 +1,11 @@
+.forge-link {
+    color: var(--action-primary);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.forge-link:hover {
+    text-decoration: underline;
+    color: var(--action-primary-hover);
+}
