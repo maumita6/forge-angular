@@ -29,8 +29,8 @@
               }
             ],
             "styles": [
-              "styles/tokens/tokens.css",
-              "src/styles.css"
+              "src/styles.css",
+              "src/styles/tokens/tokens.css"
             ]
           },
           "configurations": {
